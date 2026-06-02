@@ -1,0 +1,16 @@
+<changeSet id="005" author="chatgpt">
+
+    <createTable tableName="user_answers">
+        <column name="id" type="BIGINT">
+            <constraints primaryKey="true"/>
+        </column>
+
+        <column name="user_id" type="BIGINT"/>
+        <column name="word_id" type="BIGINT"/>
+        <column name="answer" type="VARCHAR(100)"/>
+        <column name="correct" type="BOOLEAN"/>
+        <column name="score" type="INT"/>
+        <column name="created_at" type="TIMESTAMP"/>
+    </createTable>
+
+</changeSet>

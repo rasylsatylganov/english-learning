@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+        <changeSet id="004" author="chatgpt">
+
+            <createTable tableName="words">
+                <column name="id" type="BIGINT">
+                    <constraints primaryKey="true"/>
+                </column>
+
+                <column name="english" type="VARCHAR(100)"/>
+                <column name="russian" type="VARCHAR(100)"/>
+                <column name="topic_id" type="BIGINT"/>
+            </createTable>
+
+            <insert tableName="words">
+                <column name="id" valueNumeric="1"/>
+                <column name="english" value="I"/>
+                <column name="russian" value="я"/>
+                <column name="topic_id" valueNumeric="1"/>
+            </insert>
+
+            <insert tableName="words">
+                <column name="id" valueNumeric="2"/>
+                <column name="english" value="you"/>
+                <column name="russian" value="ты"/>
+                <column name="topic_id" valueNumeric="1"/>
+            </insert>
+
+        </changeSet>
+
+</databaseChangeLog>
